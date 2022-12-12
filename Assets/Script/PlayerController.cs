@@ -44,4 +44,9 @@ public class PlayerController : MonoBehaviour
         barHP.fillAmount = hp / maxHp;
         barHPText.text = hp.ToString();
     }
+    void UpdateAI()
+    {
+        barHP.fillAmount = hp / maxHp;
+        barHPText.text = hp.ToString();
+    }
 }
