@@ -293,6 +293,7 @@ MonoBehaviour:
   barHPText: {fileID: 4724393093713808633}
   animatorMove: {fileID: 1854226514}
   animatorBody: {fileID: 1635196583}
+  damageText: {fileID: 1891801156356138561, guid: 94b74ffb05404884b9c060fe1a330cc4, type: 3}
 --- !u!95 &297287344 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 31428811024437990, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
@@ -926,6 +927,7 @@ MonoBehaviour:
   barHPText: {fileID: 1734625363}
   animatorMove: {fileID: 297287344}
   animatorBody: {fileID: 1168377473}
+  damageText: {fileID: 1891801156356138561, guid: 94b74ffb05404884b9c060fe1a330cc4, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

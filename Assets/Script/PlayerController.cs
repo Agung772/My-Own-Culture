@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator animatorMove, animatorBody;
 
+    public GameObject damageText;
+
     private void Awake()
     {
         instance = this;
@@ -36,14 +38,13 @@ public class PlayerController : MonoBehaviour
         animatorBody.SetTrigger("Hit");
 
         hp -= 20;
+        GameObject damageTextObject = Instantiate(damageText, transform);
+        damageTextObject.GetComponent<DamageText>().damageText.text = "-20";
+        damageTextObject.GetComponent<DamageText>().transform.localScale = new Vector3(1, 1, 1);
+
         UpdateUI();
     }
     void UpdateUI()
-    {
-        barHP.fillAmount = hp / maxHp;
-        barHPText.text = hp.ToString();
-    }
-    void UpdateAI()
     {
         barHP.fillAmount = hp / maxHp;
         barHPText.text = hp.ToString();
