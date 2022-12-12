@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Animator animatorMove, animatorBody;
 
+    public GameObject textDamage;
     private void Awake()
     {
         instance = this;
