@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         hp -= 20;
         GameObject damageTextObject = Instantiate(damageText, transform);
         damageTextObject.GetComponent<DamageText>().damageText.text = "-20";
-        damageTextObject.GetComponent<DamageText>().transform.localScale = new Vector3(1, 1, 1);
+        damageTextObject.GetComponent<DamageText>().transform.localScale = new Vector3(-1, 1, 1);
 
         UpdateUI();
     }

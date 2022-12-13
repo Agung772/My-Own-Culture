@@ -9,6 +9,6 @@ public class DamageText : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 2);
     }
 }

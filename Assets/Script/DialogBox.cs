@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogBox : MonoBehaviour
 {
+    public bool hasButton;
+
     public Text pertanyaan;
     public Text a3, b3, c3;
     public Text a4, b4, c4, d4;
@@ -44,6 +46,9 @@ public class DialogBox : MonoBehaviour
 
     public void Jawaban(string jawaban)
     {
+        if (!hasButton) hasButton = true;
+        else return;
+
         if (jawaban == "A")
         {
             if (jawabanBenar == "A")

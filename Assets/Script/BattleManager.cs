@@ -40,7 +40,7 @@ public class BattleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SpawnDialogBox(0);
+            SpawnDialogBox(UnityEngine.Random.Range(0, pertanyaanLevel1.Count));
         }
     }
     public void PlayerAttack()
