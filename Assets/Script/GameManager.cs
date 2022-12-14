@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public bool setDefaultPlayerPrefs;
+    public bool selectMap;
     public GameObject volumeUI, deathUI, victoryUI, transisiUI, exitUI;
     public GameObject player, enemy;
+    public Button sumatera, kalimantan, jawa, sulawesi, papua;
+
     bool exit;
 
     private void Awake()
@@ -33,12 +36,15 @@ public class GameManager : MonoBehaviour
 
         if (BattleManager.instance.noneGameplay)
         {
-
+            if (selectMap)
+            {
+                LoadPulau();
+            }
         }
         else
         {
-            LoadHPPlayer();
             yield return new WaitForSeconds(1);
+            LoadHPPlayer();
             player.SetActive(true);
             enemy.SetActive(true);
             yield return new WaitForSeconds(1);
@@ -74,6 +80,25 @@ public class GameManager : MonoBehaviour
     void LoadHPPlayer()
     {
         player.GetComponent<PlayerController>().maxHp = PlayerPrefs.GetFloat("MaxHP");
+        player.GetComponent<PlayerController>().hp = player.GetComponent<PlayerController>().maxHp;
+        player.GetComponent<PlayerController>().UpdateUI();
+    }
+    void LoadPulau()
+    {
+        if (PlayerPrefs.GetString("sumatera") == "") sumatera.interactable = true;
+        else sumatera.interactable = false;
+
+        if (PlayerPrefs.GetString("kalimantan") == "") kalimantan.interactable = true;
+        else kalimantan.interactable = false;
+
+        if (PlayerPrefs.GetString("jawa") == "") jawa.interactable = true;
+        else jawa.interactable = false;
+
+        if (PlayerPrefs.GetString("sulawesi") == "") sulawesi.interactable = true;
+        else sulawesi.interactable = false;
+
+        if (PlayerPrefs.GetString("papua") == "") papua.interactable = true;
+        else papua.interactable = false;
     }
 
     int deleteInt;
@@ -127,6 +152,10 @@ public class GameManager : MonoBehaviour
     public void VictoryUI()
     {
         victoryUI.SetActive(true);
+        BattleManager.instance.KunciPulau();
+
+        //Bonus selesaikan pulau
+        PlayerPrefs.SetFloat("MaxHP", player.GetComponent<PlayerController>().maxHp += 20);
 
         AudioManager.Instance.VictorySfx();
     }

@@ -59,6 +59,14 @@ public class BattleManager : MonoBehaviour
             SpawnDialogBoxLevel();
         }
     }
+    public void KunciPulau()
+    {
+        if (battleMap == BattleMap.sumatera) PlayerPrefs.SetString("sumatera", "kunci");
+        if (battleMap == BattleMap.kalimantan) PlayerPrefs.SetString("kalimantan", "kunci");
+        if (battleMap == BattleMap.jawa) PlayerPrefs.SetString("jawa", "kunci");
+        if (battleMap == BattleMap.sulawesi) PlayerPrefs.SetString("sulawesi", "kunci");
+        if (battleMap == BattleMap.papua) PlayerPrefs.SetString("papua", "kunci");
+    }
     public void PlayerAttack()
     {
         StartCoroutine(Coroutine());

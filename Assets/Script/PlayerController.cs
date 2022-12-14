@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
         AudioManager.Instance.DamageSfx();
     }
-    void UpdateUI()
+    public void UpdateUI()
     {
         barHP.fillAmount = hp / maxHp;
         barHPText.text = hp.ToString();
