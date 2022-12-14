@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
 
         UpdateUI();
         Death();
+
+        AudioManager.Instance.DamageSfx();
     }
     void UpdateUI()
     {

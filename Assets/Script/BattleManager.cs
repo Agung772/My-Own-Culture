@@ -8,6 +8,7 @@ using System;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager instance;
+    public bool noneGameplay;
     public enum BattleMap
     {
         sumatera, kalimantan, jawa, sulawesi, papua, none
@@ -33,8 +34,21 @@ public class BattleManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        if (battleMap == BattleMap.none)
+        {
+            noneGameplay = true;
+        }
     }
-    private void Start()
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SpawnDialogBoxLevel1(UnityEngine.Random.Range(0, pertanyaanLevel1.Count));
+        }
+    }
+    public void StartDialogBox()
     {
         if (battleMap == BattleMap.none)
         {
@@ -43,15 +57,6 @@ public class BattleManager : MonoBehaviour
         else
         {
             SpawnDialogBoxLevel();
-        }
-
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnDialogBoxLevel1(UnityEngine.Random.Range(0, pertanyaanLevel1.Count));
         }
     }
     public void PlayerAttack()
@@ -64,6 +69,7 @@ public class BattleManager : MonoBehaviour
             EnemyController.instance.TerHIT();
         }
 
+        AudioManager.Instance.AttackSfx();
         print("Jawaban benar");
     }
     public void EnemyAttack()
@@ -76,6 +82,7 @@ public class BattleManager : MonoBehaviour
             PlayerController.instance.TerHIT();
         }
 
+        AudioManager.Instance.AttackSfx();
         print("Jawaban salah");
     }
 

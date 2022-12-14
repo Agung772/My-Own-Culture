@@ -44,6 +44,8 @@ public class EnemyController : MonoBehaviour
 
         UpdateUI();
         Death();
+
+        AudioManager.Instance.DamageSfx();
     }
     void UpdateUI()
     {

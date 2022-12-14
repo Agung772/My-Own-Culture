@@ -5,24 +5,29 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public bool SetVolumeDefault;
+    public static AudioManager Instance;
+
     public float saveBGM, saveSFX;
     public Image barBGM, barSFX;
     public Text barBGMText, barSFXText;
     public AudioSource audioSourceBGM, audioSourceSFX;
-    public AudioClip clickButton;
+    public AudioClip clickButton, attack, damage, victory, defeat, switchDialogBox;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
-        if (SetVolumeDefault)
-        {
-            PlayerPrefs.SetFloat("saveBGM", 5);
-            PlayerPrefs.SetFloat("saveSFX", 5);
-        }
         saveBGM = PlayerPrefs.GetFloat("saveBGM");
         saveSFX = PlayerPrefs.GetFloat("saveSFX");
 
         UpdateVolume();
+    }
+    public void SetDefaultVolume()
+    {
+        PlayerPrefs.SetFloat("saveBGM", 2);
+        PlayerPrefs.SetFloat("saveSFX", 5);
     }
     public void PlusBGM()
     {
@@ -64,5 +69,25 @@ public class AudioManager : MonoBehaviour
     public void ClickButtonSfx()
     {
         audioSourceSFX.PlayOneShot(clickButton);
+    }
+    public void AttackSfx()
+    {
+        audioSourceSFX.PlayOneShot(attack);
+    }
+    public void DamageSfx()
+    {
+        audioSourceSFX.PlayOneShot(damage);
+    }
+    public void VictorySfx()
+    {
+        audioSourceSFX.PlayOneShot(victory);
+    }
+    public void DefeatSfx()
+    {
+        audioSourceSFX.PlayOneShot(defeat);
+    }
+    public void SwitchDialogBoxSfx()
+    {
+        audioSourceSFX.PlayOneShot(switchDialogBox);
     }
 }

@@ -216,6 +216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1076146770848506, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4631402364940636, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -317,6 +321,10 @@ PrefabInstance:
     - target: {fileID: 1076146770848506, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076146770848506, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1103577492761922, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
       propertyPath: m_IsActive
@@ -1466,6 +1474,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4724393092257318647, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 357834249}
+    - target: {fileID: 4724393092257318647, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 118827339}
+    - target: {fileID: 4724393092415131793, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c33ccf26419dcc34eb43c5d5c6582bee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
 --- !u!114 &4724393093713808633 stripped

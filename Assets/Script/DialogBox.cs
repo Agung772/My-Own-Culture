@@ -6,20 +6,57 @@ using UnityEngine.UI;
 public class DialogBox : MonoBehaviour
 {
     public bool hasButton;
+    public float time = 16;
 
     public Text pertanyaan, jawabanText;
     public Text a3, b3, c3;
     public Text a4, b4, c4, d4;
     public string jawabanBenar;
-
+    public Text timeText;
     public GameObject jawaban3, jawaban4;
 
     public Animator animator;
 
+    int jawabanInt;
     private void Start()
     {
         jawabanText.text = jawabanBenar;
+
+        AudioManager.Instance.SwitchDialogBoxSfx();
     }
+    private void Update()
+    {
+        time -= Time.deltaTime;
+        timeText.text = "Waktu " + (int)time;
+        time = Mathf.Clamp(time, 0, 100);
+        if (time <= 0 && !hasButton)
+        {
+            hasButton = true;
+            BattleManager.instance.EnemyAttack();
+            BattleManager.instance.SpawnNotifikasi(jawabanBenar);
+
+            //Exit
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                yield return new WaitForSeconds(2);
+                animator.SetTrigger("Exit");
+                yield return new WaitForSeconds(1f);
+                BattleManager.instance.SpawnDialogBoxLevel();
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void Jawaban()
+    {
+        jawabanInt++;
+        if (jawabanInt >= 5)
+        {
+            jawabanText.gameObject.SetActive(true);
+        }
+    }
+
     public void IsiPertanyaan(string Pertanyaan, string A, string B, string C, string D, string JawabanBenar)
     {
         //Jawabam3
@@ -114,5 +151,6 @@ public class DialogBox : MonoBehaviour
             Destroy(gameObject);
         }
 
+        AudioManager.Instance.ClickButtonSfx();
     }
 }
