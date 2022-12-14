@@ -105,10 +105,17 @@ public class BattleManager : MonoBehaviour
     public void NextLevel()
     {
         level++;
-        if (level < 4)
+
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
         {
-            levelText.text = "Level " + level;
+            yield return new WaitForSeconds(0);
+            if (level < 4)
+            {
+                levelText.text = "Level " + level;
+            }
         }
+
 
     }
 

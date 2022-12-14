@@ -66,6 +66,7 @@ public class EnemyController : MonoBehaviour
                 animatorMove.SetTrigger("Death");
 
                 yield return new WaitForSeconds(1);
+
                 levelEnemy++;
                 if (levelEnemy == 4)
                 {
