@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject volumeUI;
+    public GameObject volumeUI, deathUI, victoryUI;
 
     private void Awake()
     {
@@ -24,6 +24,14 @@ public class GameManager : MonoBehaviour
             volumeUI.SetActive(false);
         }
     }
+    public void DeathUI()
+    {
+        deathUI.SetActive(true);
+    }
+    public void VictoryUI()
+    {
+        victoryUI.SetActive(true);
+    }
 
     public void LoadSumatera()
     {
@@ -32,5 +40,9 @@ public class GameManager : MonoBehaviour
     public void LoadSelectMap()
     {
         SceneManager.LoadScene("SelectMap");
+    }
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

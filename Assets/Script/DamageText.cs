@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class DamageText : MonoBehaviour
 {
     public Text damageText;
+    public float destroyTime;
 
     private void Start()
     {
-        Destroy(gameObject, 2);
+        Destroy(gameObject, destroyTime);
     }
 }

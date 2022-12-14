@@ -7,7 +7,7 @@ public class DialogBox : MonoBehaviour
 {
     public bool hasButton;
 
-    public Text pertanyaan;
+    public Text pertanyaan, jawabanText;
     public Text a3, b3, c3;
     public Text a4, b4, c4, d4;
     public string jawabanBenar;
@@ -15,6 +15,11 @@ public class DialogBox : MonoBehaviour
     public GameObject jawaban3, jawaban4;
 
     public Animator animator;
+
+    private void Start()
+    {
+        jawabanText.text = jawabanBenar;
+    }
     public void IsiPertanyaan(string Pertanyaan, string A, string B, string C, string D, string JawabanBenar)
     {
         //Jawabam3
@@ -58,6 +63,7 @@ public class DialogBox : MonoBehaviour
             else
             {
                 BattleManager.instance.EnemyAttack();
+                BattleManager.instance.SpawnNotifikasi(jawabanBenar);
             }
         }
         else if (jawaban == "B")
@@ -69,6 +75,7 @@ public class DialogBox : MonoBehaviour
             else
             {
                 BattleManager.instance.EnemyAttack();
+                BattleManager.instance.SpawnNotifikasi(jawabanBenar);
             }
         }
         else if (jawaban == "C")
@@ -80,6 +87,7 @@ public class DialogBox : MonoBehaviour
             else
             {
                 BattleManager.instance.EnemyAttack();
+                BattleManager.instance.SpawnNotifikasi(jawabanBenar);
             }
         }
         else if (jawaban == "D")
@@ -91,6 +99,7 @@ public class DialogBox : MonoBehaviour
             else
             {
                 BattleManager.instance.EnemyAttack();
+                BattleManager.instance.SpawnNotifikasi(jawabanBenar);
             }
         }
 
@@ -100,7 +109,8 @@ public class DialogBox : MonoBehaviour
         {
             yield return new WaitForSeconds(2);
             animator.SetTrigger("Exit");
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
+            BattleManager.instance.SpawnDialogBoxLevel();
             Destroy(gameObject);
         }
 

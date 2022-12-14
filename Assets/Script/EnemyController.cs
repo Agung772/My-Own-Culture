@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
+    public int levelEnemy = 1;
+
     public static EnemyController instance;
     public float maxHp, hp;
 
@@ -41,10 +43,45 @@ public class EnemyController : MonoBehaviour
         damageTextObject.GetComponent<DamageText>().transform.localScale = new Vector3(1, 1, 1);
 
         UpdateUI();
+        Death();
     }
     void UpdateUI()
     {
         barHP.fillAmount = hp / maxHp;
         barHPText.text = hp.ToString();
+    }
+
+    void Death()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            if (hp <= 0)
+            {
+                hp = 0;
+                BattleManager.instance.NextLevel();
+                yield return new WaitForSeconds(1);
+                animatorBody.SetTrigger("Death");
+                yield return new WaitForSeconds(1);
+                animatorMove.SetTrigger("Death");
+
+                yield return new WaitForSeconds(1);
+                levelEnemy++;
+                if (levelEnemy == 4)
+                {
+                    print("Pulau tertaklukan");
+                    GameManager.instance.VictoryUI();
+                }
+                else
+                {
+                    hp = 100;
+                    UpdateUI();
+
+                    animatorMove.SetTrigger("Spawn");
+                    animatorBody.SetTrigger("Spawn");
+                }
+            }
+        }
+
     }
 }

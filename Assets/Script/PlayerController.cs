@@ -43,10 +43,31 @@ public class PlayerController : MonoBehaviour
         damageTextObject.GetComponent<DamageText>().transform.localScale = new Vector3(-1, 1, 1);
 
         UpdateUI();
+        Death();
     }
     void UpdateUI()
     {
         barHP.fillAmount = hp / maxHp;
         barHPText.text = hp.ToString();
+    }
+
+    void Death()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            if (hp <= 0)
+            {
+                hp = 0;
+                BattleManager.instance.level = 0;
+                yield return new WaitForSeconds(1);
+                animatorBody.SetTrigger("Death");
+                yield return new WaitForSeconds(1);
+                animatorMove.SetTrigger("Death");
+                yield return new WaitForSeconds(1);
+                GameManager.instance.DeathUI();
+
+            }
+        }
     }
 }
