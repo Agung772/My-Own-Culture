@@ -24,11 +24,19 @@ public class DialogBox : MonoBehaviour
 
         AudioManager.Instance.SwitchDialogBoxSfx();
     }
+
+    bool detikan;
     private void Update()
     {
         time -= Time.deltaTime;
         timeText.text = "Waktu " + (int)time;
         time = Mathf.Clamp(time, 0, 100);
+
+        if ((int)time == 5 && !detikan)
+        {
+            detikan = true;
+            AudioManager.Instance.DetikanSfx();
+        }
         if (time <= 0 && !hasButton)
         {
             hasButton = true;
