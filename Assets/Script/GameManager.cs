@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
         }
+
+        CheatPulau();
     }
 
 
@@ -85,20 +87,57 @@ public class GameManager : MonoBehaviour
     }
     void LoadPulau()
     {
-        if (PlayerPrefs.GetString("sumatera") == "") sumatera.interactable = true;
-        else sumatera.interactable = false;
+        if (PlayerPrefs.GetString("PrologAkhir") == "")
+        {
+            if (PlayerPrefs.GetString("sumatera") == "") sumatera.interactable = true;
+            else sumatera.interactable = false;
 
-        if (PlayerPrefs.GetString("kalimantan") == "") kalimantan.interactable = true;
-        else kalimantan.interactable = false;
+            if (PlayerPrefs.GetString("kalimantan") == "") kalimantan.interactable = true;
+            else kalimantan.interactable = false;
 
-        if (PlayerPrefs.GetString("jawa") == "") jawa.interactable = true;
-        else jawa.interactable = false;
+            if (PlayerPrefs.GetString("jawa") == "") jawa.interactable = true;
+            else jawa.interactable = false;
 
-        if (PlayerPrefs.GetString("sulawesi") == "") sulawesi.interactable = true;
-        else sulawesi.interactable = false;
+            if (PlayerPrefs.GetString("sulawesi") == "") sulawesi.interactable = true;
+            else sulawesi.interactable = false;
 
-        if (PlayerPrefs.GetString("papua") == "") papua.interactable = true;
-        else papua.interactable = false;
+            if (PlayerPrefs.GetString("papua") == "") papua.interactable = true;
+            else papua.interactable = false;
+        }
+
+
+        if (PlayerPrefs.GetString("PrologAkhir") == "")
+        {
+            if (PlayerPrefs.GetString("sumatera") != "" && PlayerPrefs.GetString("kalimantan") != "" && PlayerPrefs.GetString("jawa") != "" && PlayerPrefs.GetString("sulawesi") != "" && PlayerPrefs.GetString("papua") != "")
+            {
+                PlayerPrefs.SetString("PrologAkhir", "Sudah");
+                SceneManager.LoadScene("PrologAkhir");
+            }
+        }
+    }
+
+    void CheatPulau()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            PlayerPrefs.SetString("sumatera", "Sudah");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            PlayerPrefs.SetString("kalimantan", "Sudah");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            PlayerPrefs.SetString("jawa", "Sudah");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            PlayerPrefs.SetString("sulawesi", "Sudah");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            PlayerPrefs.SetString("papua", "Sudah");
+        }
     }
 
     int deleteInt;
@@ -254,6 +293,30 @@ public class GameManager : MonoBehaviour
             StartTransisi();
             yield return new WaitForSeconds(1);
             SceneManager.LoadScene("Mainmenu");
+        }
+
+        AudioManager.Instance.ClickButtonSfx();
+    }
+    public void LoadInstruction()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            StartTransisi();
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("Instruction");
+        }
+
+        AudioManager.Instance.ClickButtonSfx();
+    }
+    public void LoadStoryOfIndonesia()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            StartTransisi();
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("StoryOfIndonesia");
         }
 
         AudioManager.Instance.ClickButtonSfx();

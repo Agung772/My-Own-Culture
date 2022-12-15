@@ -5,17 +5,22 @@ using UnityEngine.UI;
 
 public class Story : MonoBehaviour
 {
+    public bool storyAkhir;
     public Text[] text;
     int textInt;
     public void Next()
     {
         ResetText();
         textInt++;
-        if (textInt == 5)
+        if (textInt == text.Length && !storyAkhir)
         {
             GameManager.instance.LoadSelectMap();
         }
-        else if (textInt < 5)
+        else if (textInt == text.Length && storyAkhir)
+        {
+            GameManager.instance.LoadMainmenu();
+        }
+        else if (textInt < text.Length)
         {
             text[textInt].gameObject.SetActive(true);
         }

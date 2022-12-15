@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sulawesi.unity
     guid: 00e9fa293ebdb304f800e467fb78bf05
+  - enabled: 1
+    path: Assets/Scenes/StoryOfIndonesia.unity
+    guid: 3112812d2584f384dba47765401d69d6
+  - enabled: 1
+    path: Assets/Scenes/Instruction.unity
+    guid: ec8c3172844856146b5a539d7f8301e3
+  - enabled: 1
+    path: Assets/Scenes/PrologAkhir.unity
+    guid: da4ebc8159191974fa677c18560e7f6f
   m_configObjects: {}

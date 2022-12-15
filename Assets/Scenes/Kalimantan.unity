@@ -1136,11 +1136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel1.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.size
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel1.Array.data[0].a
@@ -1183,148 +1183,188 @@ PrefabInstance:
       value: 'Rumah singgah '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[3].a
+      value: Bugis
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[3].b
+      value: 'Dayak '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[3].c
+      value: Jawa
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[4].a
+      value: Banjar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[4].b
+      value: Dayak
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[4].c
+      value: 'Bugis '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[0].a
-      value: 
+      value: Jatung Utang
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[0].b
-      value: 
+      value: Kolintang
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[0].c
-      value: 
+      value: Babun
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[0].d
-      value: 
+      value: Rebab
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[1].a
-      value: Kampuang Nan Jauh Di Mato
+      value: Kalimantan Timur
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[1].b
-      value: Ampar-Ampar Pisang
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[1].c
-      value: O Ina Ni Keke
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[1].d
-      value: Sinsin Sang Batu Manikam
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[2].a
-      value: Sumatera Utara
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[2].b
-      value: Sumatera Barat
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[2].c
-      value: Jawa Barat
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[2].d
-      value: Sulawesi Utara
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[3].a
-      value: Sumatera Barat
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[3].b
       value: Kalimantan Barat
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].c
+      value: Kalimantan Selatan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].d
+      value: 'Kalimantan Utara '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].a
+      value: 'Sape '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].b
+      value: Tuma
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].c
+      value: Rebab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].d
+      value: Sluding
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].a
+      value: Tari Gantar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].b
+      value: 'Tari Hudoq '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[3].c
-      value: Jawa Timur
+      value: Tari Gong
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[3].d
-      value: Sulawesi Utara
+      value: 'Tari Jepen '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[4].a
-      value: Sumatera Barat
+      value: 'Senggayung '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[4].b
-      value: Sumatera Utara
+      value: Sape
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[4].c
-      value: Bali
+      value: Tuma
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[4].d
-      value: Jawa Timur
+      value: Babun
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[5].a
-      value: 'Jakarta '
+      value: Tari Jepen
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[5].b
-      value: Aceh
+      value: Tari Hudoq
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[5].c
-      value: Sumatera Utara
+      value: Tari Kancet Punan Letto
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[5].d
-      value: Sulawesi Selatan
+      value: 'Tari Gong '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[6].a
-      value: 'Sumatera Selatan '
+      value: 'Mandau '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[6].b
-      value: Sumatera Utara
+      value: Gayang
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[6].c
-      value: Bali
+      value: Sumpit
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[6].d
-      value: Jawa Barat
+      value: Dohong
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[7].a
-      value: 'Soelaeman Soemardi '
+      value: Ayam Cincae
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[7].b
-      value: 'Selo Soemardjan '
+      value: Juhu Umbut Rotan
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[7].c
-      value: 'Usman Ibrahim '
+      value: Choi Pan
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[7].d
-      value: Usmar Ismail
+      value: 'Soto Banjar '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[8].a
-      value: Pontianak
+      value: 'Telawang '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[8].b
-      value: Betawi
+      value: Sungga
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[8].c
-      value: 'Madura '
+      value: Keris
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[8].d
-      value: 'Jawa Tengah '
+      value: Dohon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[9].a
+      value: 'Paser '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[9].b
+      value: Dayak
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[9].c
+      value: Banjar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[9].d
+      value: Melayu
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel1.Array.data[0].pertanyaan
@@ -1339,44 +1379,63 @@ PrefabInstance:
       value: Bangunan khas suatu daerah dinamakan
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[3].pertanyaan
+      value: Mandau adalah senjata tradisional suku
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[4].pertanyaan
+      value: Yang bukan termasuk suku-suku di Kalimantan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[0].pertanyaan
-      value: 
+      value: 'Alat musik tradisional yang dimiliki Suku Dayak Kenyah yang terbuat
+        dari kayu temaha atau kapi mawat dan memiliki bentuk hampir mirip Gambang
+        adalah '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[1].pertanyaan
-      value: Lagu wilayah Sumatera Barat yang bercerita kangen seorang perantau akan
-        desa halaman adalah..
+      value: Tari Gong adalah tari tradisional dari
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[2].pertanyaan
-      value: "Lagu Alusiau berasal dari\u2026"
+      value: Alat musik dari Kalimantan yang dimainkan dengan cara dipetik adalah
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[3].pertanyaan
-      value: Lagu Kambanglah Bungo adalah lagu yang berasal dari daerah..
+      value: Tari yang berasal dari suku Dayak yang ditampilkan untuk menyambut tamu
+        dan acara lainnya disebut
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[4].pertanyaan
-      value: Indonesia sangat kaya dengan alat musik. Keragaman alat musik tersebar
-        di setiap daerah di Nusantara, salah satunya yaitu alat musik taganing. Alat
-        musik ini berasal dari daerah...
+      value: Alat musik yang dimainkan pada musim buah, karena masyarakat Kalimantan
+        percaya jika tidak dimainkan pada musim buah adakan mendatangkan penyakit
+        sampar adalah
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[5].pertanyaan
-      value: "Rumah bolon berasal dari \u2026. "
+      value: Tari tradisional dari suku Dayak Modang yang sakral dan kental dengan
+        nuansa mistis, serta berhubungan dengan prosesi ritual atau upacara adat
+        adalah
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[6].pertanyaan
-      value: "Tari serampang dua belas berasal dari daerah \u2026"
+      value: Senjata tradisional berbentuk seperti parang yang umumnya digunakan
+        oleh raja atau kepala suku dari suku Dayak dan kental akan makna magis disebut
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[7].pertanyaan
-      value: "Seorang sastrawan dan sutradara film indonesia yang berdarah minangkabau
-        adalah \u2026."
+      value: 'Makanan asal Pontianak yang tidak lepas dari pengaruh budaya Tiongkok,
+        memiliki rasa gurih dan dilengkapi dengan isian lobak dan ebi disebut '
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[8].pertanyaan
-      value: "Lagu daerah Tanduk majeng berasal dari daerah\u2026"
+      value: Senjata yang dipakai oleh suku Dayak sebagai pelindung diri dari segala
+        serangan musuh yang datang ketika terjadi peperangan disebut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[9].pertanyaan
+      value: Suku di Kalimantan yang mendirikan Kerajaan Sadurangas atau pada awal
+        abad ke XVI adalah
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel1.Array.data[1].jawabanBenar
@@ -1385,6 +1444,14 @@ PrefabInstance:
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel1.Array.data[2].jawabanBenar
       value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[3].jawabanBenar
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[4].jawabanBenar
+      value: C
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[0].jawabanBenar
@@ -1400,27 +1467,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[3].jawabanBenar
-      value: A
+      value: '-'
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[4].jawabanBenar
-      value: B
+      value: A
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[5].jawabanBenar
-      value: D
-      objectReference: {fileID: 0}
-    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
-      propertyPath: pertanyaanLevel2.Array.data[6].jawabanBenar
       value: B
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[6].jawabanBenar
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[7].jawabanBenar
-      value: D
+      value: C
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[8].jawabanBenar
-      value: C
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[9].jawabanBenar
+      value: A
       objectReference: {fileID: 0}
     - target: {fileID: 2966216306360870419, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: m_IsActive
