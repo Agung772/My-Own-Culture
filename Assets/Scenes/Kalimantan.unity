@@ -1467,7 +1467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[3].jawabanBenar
-      value: '-'
+      value: A
       objectReference: {fileID: 0}
     - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: pertanyaanLevel2.Array.data[4].jawabanBenar
