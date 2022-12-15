@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     public float saveBGM, saveSFX;
     public Image barBGM, barSFX;
     public Text barBGMText, barSFXText;
-    public AudioSource audioSourceBGM, audioSourceSFX;
+    public AudioSource audioSourceBGM, audioSourceSFX, audioSourceTime;
     public AudioClip clickButton, attack, damage, victory, defeat, switchDialogBox, detikan;
 
     private void Awake()
@@ -90,8 +90,12 @@ public class AudioManager : MonoBehaviour
     {
         audioSourceSFX.PlayOneShot(switchDialogBox);
     }
-    public void DetikanSfx()
+    public void StartTimeSfx()
     {
-        audioSourceSFX.PlayOneShot(detikan);
+        audioSourceTime.Play();
+    }
+    public void StopTimeSfx()
+    {
+        audioSourceTime.Stop();
     }
 }

@@ -35,7 +35,7 @@ public class DialogBox : MonoBehaviour
         if ((int)time == 5 && !detikan)
         {
             detikan = true;
-            AudioManager.Instance.DetikanSfx();
+            AudioManager.Instance.StartTimeSfx();
         }
         if (time <= 0 && !hasButton)
         {
@@ -47,6 +47,7 @@ public class DialogBox : MonoBehaviour
             StartCoroutine(Coroutine());
             IEnumerator Coroutine()
             {
+                AudioManager.Instance.StopTimeSfx();
                 yield return new WaitForSeconds(2);
                 animator.SetTrigger("Exit");
                 yield return new WaitForSeconds(1f);
@@ -152,6 +153,7 @@ public class DialogBox : MonoBehaviour
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
         {
+            AudioManager.Instance.StopTimeSfx();
             yield return new WaitForSeconds(2);
             animator.SetTrigger("Exit");
             yield return new WaitForSeconds(1f);
