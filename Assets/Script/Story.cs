@@ -15,7 +15,7 @@ public class Story : MonoBehaviour
         {
             GameManager.instance.LoadSelectMap();
         }
-        else
+        else if (textInt < 5)
         {
             text[textInt].gameObject.SetActive(true);
         }

@@ -184,6 +184,54 @@ public class GameManager : MonoBehaviour
 
         AudioManager.Instance.ClickButtonSfx();
     }
+    public void LoadPapua()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            StartTransisi();
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("Papua");
+        }
+
+        AudioManager.Instance.ClickButtonSfx();
+    }
+    public void LoadKalimantan()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            StartTransisi();
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("Kalimantan");
+        }
+
+        AudioManager.Instance.ClickButtonSfx();
+    }
+    public void LoadJawa()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            StartTransisi();
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("Jawa");
+        }
+
+        AudioManager.Instance.ClickButtonSfx();
+    }
+    public void LoadSulawesi()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            StartTransisi();
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("Sulawesi");
+        }
+
+        AudioManager.Instance.ClickButtonSfx();
+    }
 
     public void LoadLevel()
     {
@@ -207,6 +255,33 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             SceneManager.LoadScene("Mainmenu");
         }
+
+        AudioManager.Instance.ClickButtonSfx();
+    }
+    public void StartGame()
+    {
+        if (PlayerPrefs.GetString("Prolog") == "")
+        {
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                PlayerPrefs.SetString("Prolog", "Sudah");
+                StartTransisi();
+                yield return new WaitForSeconds(1);
+                SceneManager.LoadScene("Prolog");
+            }
+        }
+        else
+        {
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                StartTransisi();
+                yield return new WaitForSeconds(1);
+                SceneManager.LoadScene("SelectMap");
+            }
+        }
+
 
         AudioManager.Instance.ClickButtonSfx();
     }
