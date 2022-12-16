@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator animatorMove, animatorBody;
 
-    public GameObject textDamage;
+    public GameObject damageText;
+
     private void Awake()
     {
         instance = this;
@@ -37,16 +38,38 @@ public class PlayerController : MonoBehaviour
         animatorBody.SetTrigger("Hit");
 
         hp -= 20;
+        GameObject damageTextObject = Instantiate(damageText, transform);
+        damageTextObject.GetComponent<DamageText>().damageText.text = "-20";
+        damageTextObject.GetComponent<DamageText>().transform.localScale = new Vector3(-1, 1, 1);
+
         UpdateUI();
+        Death();
+
+        AudioManager.Instance.DamageSfx();
     }
-    void UpdateUI()
+    public void UpdateUI()
     {
         barHP.fillAmount = hp / maxHp;
         barHPText.text = hp.ToString();
     }
-    void UpdateAI()
+
+    void Death()
     {
-        barHP.fillAmount = hp / maxHp;
-        barHPText.text = hp.ToString();
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            if (hp <= 0)
+            {
+                hp = 0;
+                BattleManager.instance.level = 0;
+                yield return new WaitForSeconds(1);
+                animatorBody.SetTrigger("Death");
+                yield return new WaitForSeconds(1);
+                animatorMove.SetTrigger("Death");
+                yield return new WaitForSeconds(1);
+                GameManager.instance.DeathUI();
+
+            }
+        }
     }
 }

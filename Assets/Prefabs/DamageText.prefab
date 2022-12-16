@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageText: {fileID: 1891801155137912471}
+  destroyTime: 2
 --- !u!223 &1891801156356138565
 Canvas:
   m_ObjectHideFlags: 0

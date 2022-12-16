@@ -216,6 +216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1076146770848506, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4631402364940636, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -293,6 +297,7 @@ MonoBehaviour:
   barHPText: {fileID: 4724393093713808633}
   animatorMove: {fileID: 1854226514}
   animatorBody: {fileID: 1635196583}
+  damageText: {fileID: 1891801156356138561, guid: 94b74ffb05404884b9c060fe1a330cc4, type: 3}
 --- !u!95 &297287344 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 31428811024437990, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
@@ -316,6 +321,10 @@ PrefabInstance:
     - target: {fileID: 1076146770848506, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076146770848506, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1103577492761922, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
       propertyPath: m_IsActive
@@ -920,12 +929,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfe141450c73fb4aaedf38ae9170760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelEnemy: 1
   maxHp: 100
   hp: 0
   barHP: {fileID: 702020900}
   barHPText: {fileID: 1734625363}
   animatorMove: {fileID: 297287344}
   animatorBody: {fileID: 1168377473}
+  damageText: {fileID: 1891801156356138561, guid: 94b74ffb05404884b9c060fe1a330cc4, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,81 +1036,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 95222202409354866, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
   m_PrefabInstance: {fileID: 357834248}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1198491263
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1198491264}
-  - component: {fileID: 1198491266}
-  - component: {fileID: 1198491265}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1198491264
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198491263}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1810227626}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 1280, y: 10}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1198491265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198491263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1198491266
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198491263}
-  m_CullTransparentMesh: 1
 --- !u!1 &1444955308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,106 +1118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1810227622
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1810227626}
-  - component: {fileID: 1810227625}
-  - component: {fileID: 1810227624}
-  - component: {fileID: 1810227623}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1810227623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810227622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1810227624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810227622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1280, y: 720}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1810227625
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810227622}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1810227626
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810227622}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1198491264}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!95 &1854226514 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 31428811024437990, guid: e401b93f8d618fb43b67f19b68229e3c, type: 3}
@@ -1294,6 +1130,302 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: battleMap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[0].a
+      value: Saluang
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[0].b
+      value: Tifa
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[0].c
+      value: Sampeq
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[0].d
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[1].a
+      value: Aceh
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[1].b
+      value: Sunda
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[1].c
+      value: Dayak
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[2].a
+      value: Maluku
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[2].b
+      value: 'Jambi '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[2].c
+      value: Aceh
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[0].a
+      value: Baju Batusangkar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[0].b
+      value: Rejang Lebong
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[0].c
+      value: Ulee Balang
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[0].d
+      value: Kebaya
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].a
+      value: Kampuang Nan Jauh Di Mato
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].b
+      value: Ampar-Ampar Pisang
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].c
+      value: O Ina Ni Keke
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].d
+      value: Sinsin Sang Batu Manikam
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].a
+      value: Sumatera Utara
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].b
+      value: Sumatera Barat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].c
+      value: Jawa Barat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].d
+      value: Sulawesi Utara
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].a
+      value: Sumatera Barat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].b
+      value: Kalimantan Barat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].c
+      value: Jawa Timur
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].d
+      value: Sulawesi Utara
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[4].a
+      value: Sumatera Barat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[4].b
+      value: Sumatera Utara
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[4].c
+      value: Bali
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[4].d
+      value: Jawa Timur
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[5].a
+      value: 'Jakarta '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[5].b
+      value: Aceh
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[5].c
+      value: Sumatera Utara
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[5].d
+      value: Sulawesi Selatan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[6].a
+      value: 'Sumatera Selatan '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[6].b
+      value: Sumatera Utara
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[6].c
+      value: Bali
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[6].d
+      value: Jawa Barat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[7].a
+      value: 'Soelaeman Soemardi '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[7].b
+      value: 'Selo Soemardjan '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[7].c
+      value: 'Usman Ibrahim '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[7].d
+      value: Usmar Ismail
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[8].a
+      value: Pontianak
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[8].b
+      value: Betawi
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[8].c
+      value: 'Madura '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[8].d
+      value: 'Jawa Tengah '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[0].pertanyaan
+      value: Alat musik yang berasal dari Minangkabau adalah....
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[1].pertanyaan
+      value: "Rencong adalah senjata tradisional dari \u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[2].pertanyaan
+      value: Lagu Bungong Jeumpa merupakan lagu yang berasal dari dari daerah ..
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[0].pertanyaan
+      value: "Pakaian adat dari Sumatera Barat adalah \u2026.."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].pertanyaan
+      value: Lagu wilayah Sumatera Barat yang bercerita kangen seorang perantau akan
+        desa halaman adalah..
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].pertanyaan
+      value: "Lagu Alusiau berasal dari\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].pertanyaan
+      value: Lagu Kambanglah Bungo adalah lagu yang berasal dari daerah..
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[4].pertanyaan
+      value: Indonesia sangat kaya dengan alat musik. Keragaman alat musik tersebar
+        di setiap daerah di Nusantara, salah satunya yaitu alat musik taganing. Alat
+        musik ini berasal dari daerah...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[5].pertanyaan
+      value: "Rumah bolon berasal dari \u2026. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[6].pertanyaan
+      value: "Tari serampang dua belas berasal dari daerah \u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[7].pertanyaan
+      value: "Seorang sastrawan dan sutradara film indonesia yang berdarah minangkabau
+        adalah \u2026."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[8].pertanyaan
+      value: "Lagu daerah Tanduk majeng berasal dari daerah\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[1].jawabanBenar
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel1.Array.data[2].jawabanBenar
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[0].jawabanBenar
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[1].jawabanBenar
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[2].jawabanBenar
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[3].jawabanBenar
+      value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[4].jawabanBenar
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[5].jawabanBenar
+      value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[6].jawabanBenar
+      value: B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[7].jawabanBenar
+      value: D
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795543122, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: pertanyaanLevel2.Array.data[8].jawabanBenar
+      value: C
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966216306360870419, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4724393092257318645, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1342,6 +1474,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4724393092257318647, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 357834249}
+    - target: {fileID: 4724393092257318647, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 118827339}
+    - target: {fileID: 4724393092415131793, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c33ccf26419dcc34eb43c5d5c6582bee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98eb23ad706012749a88402c9558d7bf, type: 3}
 --- !u!114 &4724393093713808633 stripped
