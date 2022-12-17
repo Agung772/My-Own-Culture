@@ -109,11 +109,156 @@ public class BattleManager : MonoBehaviour
     {
         if (level == 1)
         {
-            SpawnDialogBoxLevel1(UnityEngine.Random.Range(0, pertanyaanLevel1.Count));
+            countInt1++;
+            randomPertanyaan1("1");
+            SpawnDialogBoxLevel1(randomInt1);
         }
         else if (level == 2 || level == 3)
         {
+            if (!oneUse2)
+            {
+                oneUse2 = true;
+                oneUse1 = false;
+                countInt1 = -1;
+            }
+
+            countInt1++;
+            randomPertanyaan1("2");
             SpawnDialogBoxLevel2(UnityEngine.Random.Range(0, pertanyaanLevel2.Count));
+        }
+    }
+
+    public bool[] randomBool1;
+    public int randomInt1, countInt1;
+    bool oneUse1, oneUse2;
+    void randomPertanyaan1(string pertanyaan)
+    {
+        if (pertanyaan == "1")
+        {
+            if (!oneUse1)
+            {
+                oneUse1 = true;
+                randomBool1 = new bool[pertanyaanLevel1.Count];
+            }
+
+            randomInt1 = UnityEngine.Random.Range(0, pertanyaanLevel1.Count);
+
+            if (countInt1 == pertanyaanLevel1.Count)
+            {
+                countInt1 = 0;
+                oneUse1 = false;
+            }
+        }
+        else if (pertanyaan == "2")
+        {
+            if (!oneUse1)
+            {
+                oneUse1 = true;
+                randomBool1 = new bool[pertanyaanLevel2.Count];
+            }
+
+            randomInt1 = UnityEngine.Random.Range(0, pertanyaanLevel2.Count);
+
+            if (countInt1 == pertanyaanLevel2.Count)
+            {
+                countInt1 = 0;
+                oneUse1 = false;
+            }
+        }
+
+
+        if (randomInt1 == 0 && !randomBool1[0])
+        {
+            randomBool1[0] = true;
+            randomInt1 = 0;
+        }
+        else if (randomInt1 == 1 && !randomBool1[1])
+        {
+            randomBool1[1] = true;
+            randomInt1 = 1;
+        }
+        else if (randomInt1 == 2 && !randomBool1[2])
+        {
+            randomBool1[2] = true;
+            randomInt1 = 2;
+        }
+        else if (randomInt1 == 3 && !randomBool1[3])
+        {
+            randomBool1[3] = true;
+            randomInt1 = 3;
+        }
+        else if (randomInt1 == 4 && !randomBool1[4])
+        {
+            randomBool1[4] = true;
+            randomInt1 = 4;
+        }
+        else if (randomInt1 == 5 && !randomBool1[5])
+        {
+            randomBool1[5] = true;
+            randomInt1 = 5;
+        }
+        else if (randomInt1 == 6 && !randomBool1[6])
+        {
+            randomBool1[6] = true;
+            randomInt1 = 6;
+        }
+        else if (randomInt1 == 7 && !randomBool1[7])
+        {
+            randomBool1[7] = true;
+            randomInt1 = 7;
+        }
+        else if (randomInt1 == 8 && !randomBool1[8])
+        {
+            randomBool1[8] = true;
+            randomInt1 = 8;
+        }
+        else if (randomInt1 == 9 && !randomBool1[9])
+        {
+            randomBool1[9] = true;
+            randomInt1 = 9;
+        }
+        else if (randomInt1 == 10 && !randomBool1[10])
+        {
+            randomBool1[10] = true;
+            randomInt1 = 10;
+        }
+        else if (randomInt1 == 11 && !randomBool1[11])
+        {
+            randomBool1[11] = true;
+            randomInt1 = 11;
+        }
+        else if (randomInt1 == 12 && !randomBool1[12])
+        {
+            randomBool1[12] = true;
+            randomInt1 = 12;
+        }
+        else if (randomInt1 == 13 && !randomBool1[13])
+        {
+            randomBool1[13] = true;
+            randomInt1 = 13;
+        }
+        else if (randomInt1 == 14 && !randomBool1[14])
+        {
+            randomBool1[14] = true;
+            randomInt1 = 14;
+        }
+        else if (randomInt1 == 15 && !randomBool1[15])
+        {
+            randomBool1[15] = true;
+            randomInt1 = 15;
+        }
+        else
+        {
+            if (pertanyaan == "1")
+            {
+                randomPertanyaan1("1");
+            }
+            else if (pertanyaan == "2")
+            {
+                randomPertanyaan1("2");
+            }
+
+
         }
     }
 

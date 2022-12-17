@@ -143,6 +143,9 @@ MonoBehaviour:
   notifikasiText: {fileID: 1891801156356138561, guid: 0ea326ba2cb2dac4ca6efe10309979a9, type: 3}
   level: 1
   levelText: {fileID: 3893886638880950435}
+  randomBool1: 
+  randomInt1: 0
+  countInt1: -1
 --- !u!1 &119212095198203816
 GameObject:
   m_ObjectHideFlags: 0
